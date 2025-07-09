@@ -14,6 +14,8 @@ export class Riddle {
     let answer;
     do {
       answer = readline.question(`${this.taskDescription} `).trim();
+      if (answer.toLowerCase() !== this.correctAnswer.toLowerCase()) 
+      console.log('Wrong answer. Try again.');
     } while (answer.toLowerCase() !== this.correctAnswer.toLowerCase());
     console.log('Correct!\n');
   }
